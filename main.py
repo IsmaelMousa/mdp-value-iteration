@@ -62,7 +62,7 @@ def display_value_history(value_history: dict[str | tuple, list[float]],
     """
     df = pd.DataFrame(value_history)
     df.index.name = "i"
-    df.columns = [f'{key[0]} {key[1]}' if isinstance(key, tuple) else key for key in df.columns]
+    df.columns = [f"{key[0]} {key[1]}" if isinstance(key, tuple) else key for key in df.columns]
 
     print(f"\n{title}")
     print(df.T)
